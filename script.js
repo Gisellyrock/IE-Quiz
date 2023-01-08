@@ -76,10 +76,10 @@ function getSelected() {
     return answer
 }
 
-submitBtn.addEventListener('click', ()=> {
+submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer){
-     if (answer === quizData[currentQuiz].corret) {
+     if(answer === quizData[currentQuiz].corret) {
         score++
      }
 
@@ -87,9 +87,9 @@ submitBtn.addEventListener('click', ()=> {
      
      if(currentQuiz < quizData.length) {
         loadQuiz()
-     }else {
+     } else {
         quiz.innerHTML = `
-        <h2>Você tem ${score}% de Inteligência Emocional</h2>
+        <h2>Você acertou ${score} de ${quizData.length}</h2>
         
         <button onclick="location.reload()"> Reload</button>
         `
