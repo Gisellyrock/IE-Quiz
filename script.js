@@ -29,7 +29,7 @@ const quizData = [
         b: "Prefiro me isolar de tudo.",
         c: "Desabafo com alguém.",
         d: "Desconto em tudo a minha volta.",
-        correct: "d",
+        correct: "c",
     },
 
 ];
@@ -79,7 +79,7 @@ function getSelected() {
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer){
-     if(answer === quizData[currentQuiz].corret) {
+     if(answer === quizData[currentQuiz].correct) {
         score++
      }
 
